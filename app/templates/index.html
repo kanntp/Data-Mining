@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/input.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Job Prediction</h1>
+    <form method="POST" action="http://127.0.0.1:5000/predict">
+    <div class="container2">
+                <div class="form-group">
+                    <label for="field1">Hours working per day:</label>
+                    <select class="form-control" id="dropdown1" name="hour_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="4">4</option>
+                        <option class="Textoption" value="5">5</option>
+                        <option class="Textoption" value="6">6</option>
+                        <option class="Textoption" value="7">7</option>
+                        <option class="Textoption" value="8">8</option>
+                        <option class="Textoption" value="9">9</option>
+                        <option class="Textoption" value="10">10</option>
+                        <option class="Textoption" value="11">11</option>
+                        <option class="Textoption" value="12">12</option>
+                        <option class="Textoption" value="4">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown1">Taken inputs from seniors or elders</label>
+                    <select class="form-control" id="dropdown1" name="inputSenior_bool_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="yes">Yes</option>
+                        <option class="Textoption" value="no">No</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown2">hard/smart worker</label>
+                    <select class="form-control" id="dropdown2" name="worker_bool_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="hard worker">Hard</option>
+                        <option class="Textoption" value="smart worker">Smart</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown3">worked in teams ever?</label>
+                    <select class="form-control" id="dropdown3" name="teamwork_bool_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="yes">Yes</option>
+                        <option class="Textoption" value="no">No</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown4">coding skills rating</label>
+                    <select class="form-control" id="dropdown2" name="coding_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="Competent">Competent</option>
+                        <option class="Textoption" value="Proficient">Proficient</option>
+                        <option class="Textoption" value="Novice">Novice</option>
+                        <option class="Textoption" value="Expert">Expert</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown5">self-learning capability</label>
+                    <select class="form-control" id="dropdown5" name="selflearn_bool_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="yes">Yes</option>
+                        <option class="Textoption" value="no">No</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown6">Interested subjects</label>
+                    <select class="form-control" id="dropdown6" name="subject_string">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="cloud computing">cloud computing</option>
+                        <option class="Textoption" value="Computer Architecture">Computer Architecture</option>
+                        <option class="Textoption" value="parallel computing">parallel computing</option>
+                        <option class="Textoption" value="IOT">IOT</option>
+                        <option class="Textoption" value="Software Engineering">Software Engineering</option>
+                        <option class="Textoption" value="hacking">hacking</option>
+                        <option class="Textoption" value="data engineering">data engineering</option>
+                        <option class="Textoption" value="networks">networks</option>
+                        <option class="Textoption" value="programming">programming</option>
+                        <option class="Textoption" value="Management">Management</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dropdown7">Percentage in Communication skills</label>
+                    <select class="form-control" id="dropdown7" name="grade">
+                        <option value="">--Select--</option>
+                        <option class="Textoption" value="A">A</option>
+                        <option class="Textoption" value="B">B</option>
+                        <option class="Textoption" value="C">C</option>
+                        <option class="Textoption" value="C">D</option>
+                        <option class="Textoption" value="C">Other</option>
+                    </select>
+                </div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
